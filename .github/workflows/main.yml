@@ -1,4 +1,4 @@
-name: SimpleArtifact
+name: lab09
 
 on:
   push:
@@ -9,11 +9,11 @@ jobs:
       steps:
       - uses: actions/checkout@v2
       - run: mkdir -p path/to/artifact
-      - run: echo HELLO_WORLD > path/to/artifact/hello_world.txt
+      - run: echo hello > path/to/artifact/world.txt
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
-          path: path/to/artifact/helo_world.txt
+          path: path/to/artifact/world.txt
     work1:
       runs-on: ubuntu-latest
       steps: 
